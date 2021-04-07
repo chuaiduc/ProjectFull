@@ -6,8 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-	@GetMapping("/list-products")
+	@GetMapping("/")
 	public String index() {
+		return "index";
+	}
+	@GetMapping("/list-products")
+	public String home() {
 		return "home";
 	}
 }
