@@ -28,7 +28,7 @@
                 
                     <td>No.{{$index+1}}</td>
                     <td>{{ x.name }}</td>
-                    <td>{{ x.price}}</td>
+                    <td>{{ x.price | number:0}}đ</td>
                     <td>{{ x.quantity }}</td>
                     <td>{{x.partner.name}}</td>
                     <td>{{x.productType.name}}</td>
