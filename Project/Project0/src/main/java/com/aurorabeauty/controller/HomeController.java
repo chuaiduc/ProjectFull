@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-	@GetMapping("/")
+	@GetMapping("/list-products")
 	public String index() {
 		return "home";
 	}
