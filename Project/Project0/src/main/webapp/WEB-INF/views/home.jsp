@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <!DOCTYPE html>
     <html>
 
     <head>
-        <meta charset="ISO-8859-1">
+        <meta charset="UTF-8">
         <title>Index Page</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,15 +17,16 @@
         <div class="container">
             <table class="table table-striped">
                 <tr style="background-color:chocolate;">
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Partner</th>
-                    <th>Product Type</th>
+                    <th>No.</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Đối tác</th>
+                    <th>Loại</th>
                 </tr>
                 <tr ng-repeat="x in datafromAPI">
-                    <td>{{ x.id }}</td>
+                
+                    <td>No.{{$index+1}}</td>
                     <td>{{ x.name }}</td>
                     <td>{{ x.price}}</td>
                     <td>{{ x.quantity }}</td>
@@ -46,6 +47,7 @@
                 url: '/api/product/all'
             }).then(function successCallback(response) {
                 $scope.datafromAPI = response.data;
+                
             }, function errorCallback(response) {
                 console.log(response.status);
             });
