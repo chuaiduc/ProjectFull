@@ -18,11 +18,11 @@ public class PartnerController {
 	@Autowired
 	private PartnerService service;
 	
-	@PostMapping("/addpartner")
+	@PostMapping("/add")
 	public Partner addPartner(@RequestBody Partner partner) {
 		return service.savePartner(partner);
 	}
-	@PostMapping("/addpartners")
+	@PostMapping("/addmultiple")
 	public List<Partner> addPartners(@RequestBody List<Partner> partners) {
 		return service.savePartners(partners);
 	}

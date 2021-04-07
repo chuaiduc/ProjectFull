@@ -18,11 +18,11 @@ public class ProductTypeController {
 
 	@Autowired
 	private ProductTypeService service;
-	@PostMapping("/addproducttype")
+	@PostMapping("/add")
 	public ProductType addProductType(@RequestBody ProductType productType) {
 		return service.saveProductType(productType);
 	}
-	@PostMapping("/addproducttypes")
+	@PostMapping("/addmultiple")
 	public List<ProductType> addProductTypes(@RequestBody List<ProductType> productTypes) {
 		return service.saveProductTypes(productTypes);
 	}

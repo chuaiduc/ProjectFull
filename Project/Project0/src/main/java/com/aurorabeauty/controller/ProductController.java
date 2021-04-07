@@ -17,11 +17,11 @@ import com.aurorabeauty.service.ProductService;
 public class ProductController {
 	@Autowired
 	private ProductService service;
-	@PostMapping("/addproduct")
+	@PostMapping("/add")
 	public Product addProduct(@RequestBody Product product) {
 		return service.saveProduct(product);
 	}
-	@PostMapping("/addproducts")
+	@PostMapping("/addmultiple")
 	public List<Product> addProducts(@RequestBody List<Product> products) {
 		return service.saveProducts(products);
 	}
