@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.aurorabeauty.entity.Partner;
+import com.aurorabeauty.entity.Product;
 import com.aurorabeauty.repository.PartnerRepo;
 
 @Service
