@@ -19,6 +19,7 @@
                 <tr style="background-color:chocolate;">
                     <th>No.</th>
                     <th>Tên sản phẩm</th>
+                    <th>Image</th>
                     <th>Đơn giá</th>
                     <th>Số lượng</th>
                     <th>Đối tác</th>
@@ -28,6 +29,7 @@
                 
                     <td>No.{{$index+1}}</td>
                     <td>{{ x.name }}</td>
+                    <td><img src="{{x.imageUrl}}" width="100px" height="100px"/></td>
                     <td>{{ x.price | number:0}}đ</td>
                     <td>{{ x.quantity }}</td>
                     <td>{{x.partner.name}}</td>
@@ -47,6 +49,7 @@
                 url: '/api/product/all'
             }).then(function successCallback(response) {
                 $scope.datafromAPI = response.data;
+                console.log($scope.datafromAPI);
                 
             }, function errorCallback(response) {
                 console.log(response.status);

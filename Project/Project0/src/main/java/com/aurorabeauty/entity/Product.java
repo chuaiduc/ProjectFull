@@ -1,30 +1,27 @@
 package com.aurorabeauty.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import java.util.List;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="Product_TBL")
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name="id_product")
 	private int id;
 	private String name;
 	private float price;
 	private long quantity;
+	private String imageUrl;
 	@ManyToOne(optional=false)
     @JoinColumn(name = "partner_id",referencedColumnName="id_partner")
     private Partner partner;
 	@ManyToOne(optional=false)
     @JoinColumn(name = "producttype_id",referencedColumnName="id_producttype")
     private ProductType productType;
+	
 	public int getId() {
 		return id;
 	}
@@ -55,13 +52,21 @@ public class Product {
 	public void setPartner(Partner partner) {
 		this.partner = partner;
 	}
-	
 	public ProductType getProductType() {
 		return productType;
 	}
 	public void setProductType(ProductType productType) {
 		this.productType = productType;
 	}
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	
+	
 	
 	
 	

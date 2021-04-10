@@ -1,13 +1,8 @@
 package com.aurorabeauty.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import java.util.List;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="Partner_TBL")
@@ -20,8 +15,6 @@ public class Partner {
 	private String address;
 	private String phone;
 	private String email;
-	@OneToMany(mappedBy="partner",targetEntity=Product.class, fetch=FetchType.EAGER)
-	
 	public int getId() {
 		return id;
 	}
@@ -52,5 +45,8 @@ public class Partner {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	
+	
 	
 }
