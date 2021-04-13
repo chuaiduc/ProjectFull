@@ -31,7 +31,7 @@ public class PartnerService {
 	}
 	
 	public List<Partner> getPartnersByName(String name){
-		return repo.findPartnersByName(name);
+		return repo.findByPartnerNameContaining(name);
 	}
 	
 	public String deletePartner(int id) {

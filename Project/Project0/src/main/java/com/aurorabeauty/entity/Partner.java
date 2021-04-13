@@ -1,11 +1,11 @@
 package com.aurorabeauty.entity;
 
-import java.util.List;
+
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="Partner_TBL")
+@Table(name="partner_tbl")
 public class Partner {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

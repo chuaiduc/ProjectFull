@@ -1,19 +1,15 @@
 package com.aurorabeauty.entity;
 
-
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="Producttype_TBL")
-public class ProductType {
+@Table(name="status_tbl")
+public class Status {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id_producttype")
+	@Column(name="id_status")
 	private int id;
 	private String name;
-	
-	
 	public int getId() {
 		return id;
 	}
@@ -26,7 +22,5 @@ public class ProductType {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
 	
 }

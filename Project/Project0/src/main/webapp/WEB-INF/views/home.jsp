@@ -29,7 +29,7 @@
                 
                     <td>No.{{$index+1}}</td>
                     <td>{{ x.name }}</td>
-                    <td><img src="{{x.imageUrl}}" width="100px" height="100px"/></td>
+                    <td>{{x.imageUrl}}</td>
                     <td>{{ x.price | number:0}}đ</td>
                     <td>{{ x.quantity }}</td>
                     <td>{{x.partner.name}}</td>
