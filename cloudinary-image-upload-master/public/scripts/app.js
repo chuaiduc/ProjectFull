@@ -11,6 +11,8 @@ fileUpload.addEventListener('change', function (event) {
    
     formData1.append('file', file);
     formData1.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+
+    console.log(file);
     
     axios({
         url: CLOUDINARY_URL,
@@ -27,5 +29,4 @@ fileUpload.addEventListener('change', function (event) {
     }).catch(function (err) {
         console.log(err);
     });
-    console.log(event);
 });
