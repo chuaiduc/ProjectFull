@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurora admin</title>
+    <title>Aurora admin - Add Employee</title>
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -17,9 +17,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styte.css">
+    <link rel="stylesheet" href="styte-2.css">
 </head>
 
 <body>
+
     <input type="checkbox" id="sidebar-toggle">
     <div class="sidebar">
         <div class="sidebar-header">
@@ -89,65 +91,42 @@
             </div>
         </header>
 
-        <main>
-            <section class="recent">
-                <div class="activity-grid">
-                    <div class="activity-card">
-                        <h3>Recent activity</h3>
-                        <div class="table-responsive">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>ID</th>
-                                        <th>Full name</th>
-                                        <th>Username</th>
-                                        <th>Password</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
-                                        <th>Address</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>1</td>
-                                        <td>Hao</td>
-                                        <td>hao.tran</td>
-                                        <td>hao@1234</td>
-                                        <td>123456789</td>
-                                        <td>hafo@email.com</td>
-                                        <td>Quan 7</td>
-                                        <td>
-                                            <a href="update.html" type="button" class="btn btn-success"><span class="fas fa-edit"></span></a>
-                                            <button type="button" class="btn btn-danger"><span class="fas fa-trash-alt"></span></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>2</td>
-                                        <td>Duc</td>
-                                        <td>duc.chu</td>
-                                        <td>duc@1234</td>
-                                        <td>123456789</td>
-                                        <td>duc@email.com</td>
-                                        <td>Quan Tan Phu</td>
-                                        <td>
-                                            <a href="update.html" type="button" class="btn btn-success"><span class="fas fa-edit"></span></a>
-                                            <button type="button" class="btn btn-danger"><span class="fas fa-trash-alt"></span></button>
-                                        </td>
-                                    </tr>
-                                  
-                                </tbody>
-                            </table>
+        <section>
+            <div class="container">
+                <div class="title">Add Employee</div>
+                <form action="#">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Full Name</span>
+                            <input type="text" placeholder="Enter Your Full Name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Username</span>
+                            <input type="text" placeholder="Enter Your Username" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Password</span>
+                            <input type="text" placeholder="Enter Your Password" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Phone</span>
+                            <input type="text" placeholder="Enter Your Phone" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="text" placeholder="Enter Your Email" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Address</span>
+                            <input type="text" placeholder="Enter Your Address" required>
                         </div>
                     </div>
-                </div>
-                <a href="add.html" type="button" class="btn btn-warning" style="margin-top: 2rem; font-size: 1.1rem;"><span class="fa fa-plus-circle" style="font-weight: bolder; color: #f9fafc;">&nbsp;Add new</span></a>
-                <button type="button" class="btn btn-danger" style="margin-top: 2rem; font-size: 1.1rem;"><span class="fas fa-trash-alt" style="font-weight: bolder; color: #f9fafc;">&nbsp;Delete</span></button>
-            </section>
-        </main>
+                    <div class="button">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </section>
     </div>
 </body>
 
